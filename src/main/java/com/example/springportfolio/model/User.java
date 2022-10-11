@@ -32,8 +32,12 @@ public class User {
         this.email = email;
     }
 
-    public User(User user) {
 
+    public User(User copy) {
+        id = copy.id;
+        username = copy.username;
+        password = copy.password;
+        email = copy.email;
     }
 
     public long getId() {
