@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="icon" href="/img/android-chrome-512x512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+    <title>Christopher Merritt-Software Developer</title>
+</head>
+<body>
+<main>
+    <section id="home">
+        <div class="home1">
+        <div class="greeting fs-1">
+            Welcome, My name is <span class="name fw-bold">Christopher Merritt</span>,
+            <br>
+            and my passion is web development.
+        </div>
+            <div class="button fs-4 d-flex justify-content-center mt-3">
+                <a href="#about">Get to know me</a>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <nav id="navbar" class="navbar navbar-expand-lg bg-dark p-0 fs-5 ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#home">
+                    <img src="/img/android-chrome-512x512.png" alt="Merritt" width="35" height="35">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="pe-3" aria-current="page" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="pe-3" href="#development">Development</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="pe-3" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<!--        top portion of about me-->
+        <div class="ghost"></div>
+        <h1 class="section-title text-center my-3"><span class="pb-2">About</span></h1>
+        <div class="container d-md-flex">
+            <div class="container p-3 col-sm-10 col-md-4 ">
+                <img class="headshot mx-auto" src="/img/Merritt-4137.jpg" alt="Avatar">
+            </div>
+            <div class="container introduction px-auto pt-3 col-sm-10 col-md-8" >
+                <h4><span class="mt-1 pb-1">Quick Intro</span></h4>
+                <p class="mt-3  aboutP" >
+                    Greetings, I'm a full-stack web developer and Army veteran. I am highly adaptive and work well as a team member or as an individual. I am dedicated to creating clean and flexible code to provide users with the quality they expect.
+                </p>
+                <h4><span class="pb-1">Languages</span></h4>
+                <p class="mt-3 aboutP">HTML, CSS, Bootstrap, JavaScript, jQuery, Java SE, Java EE (Servlets, JSP), Spring, MySQL, Thymeleaf</p>
+            </div>
+        </div>
+<!--        lower portion of about me with link to resume-->
+        <div class="container d-md-flex mt-2 pb-3">
+            <div class="card mx-auto col-sm-10 col-md-4">
+                <div class="card-body">
+                    <h5 class="card-title text-center"><span class="pb-1">Where I'm Coming From</span></h5>
+                    <p class="card-text mt-3 aboutP">I served in the Army for about 5 years before being medically discharged, and returning to Texas. I attended some college before falling back on my experience as a mechanic, but after 3 years I discovered a web-developer bootcamp called Codeup and chose to pursue a career in Web Development.</p>
+                </div>
+            </div>
+            <div class="card mx-auto col-sm-10 col-md-4">
+                <div class="card-body">
+                    <h5 class="card-title text-center"><span class="pb-1">Where I Am</span></h5>
+                    <p class="card-text mt-3 aboutP">I have now completed my education for full stack web-development, and now I am seeking employment as well as other opportunities to grow. While I am applying, I am focused on learning new languages, reworking old projects, completing coding challenges, and spending time with my wife and daughters.</p>
+                </div>
+            </div>
+            <div class="card mx-auto col-sm-10 col-md-4">
+                <div class="card-body position-relative">
+                    <h5 class="card-title text-center"><span class="pb-1">Where I Hope To Be</span></h5>
+                    <p class="card-text mt-3 aboutP">I enjoy working in the Full-stack, so I plan on attending courses for design to create more appealing applications. I want to work with teams on the front and backend, and develop my skills so I can lead projects and help others.</p>
+                    <div class="position-absolute bottom-0 end-0">
+                        <button class="resume-link p-1" data-bs-toggle="modal" data-bs-target="#resumeModal">View Resume</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ghost"></div>
+    </section>
+    <section id="development">
+        <div class="ghost"></div>
+        <h1 class="section-title text-center py-3 mb-3"><span class="pb-2">Development</span></h1>
+        <div class="container pt-5 d-md-flex justify-content-around">
+            <div class="budgetpros mx-auto col-sm-10 col-md-5">
+                <img class="dev-image" src="/img/Budgetlogo5.png" alt="budgetpros" height="60%" width="100%">
+                <h3 class="text-center"><a class="project-title" href="https://budgetpros.xyz/">BudgetPros</a></h3>
+                <p>
+                    <span>Budget Pros</span> is a tracker for those new to budgeting. Just input your expenses and this application will help guide you to becoming more aware of your spending.
+                </p>
+            </div>
+            <div class="odlister mx-auto col-sm-10 col-md-5">
+                <img class="dev-image" src="/img/pexels-outdoor2.jpeg" alt="odlister" height="60%" width="100%">
+                <h3 class="text-center"><a class="project-title" href="https://github.com/Go-Java-AdLister/go-OutdoorLister">Outdoor Lister</a></h3>
+                <p>
+                    <span>Outdoor Lister</span> is an open forum for individuals or local organizations to share information on outdoor events or activities, to help motivate others to get outside.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="ghost"></div>
+        <h1 class="section-title text-center py-3 mb-3"><span class="pb-2 text-secondary">Contact Me</span></h1>
+        <div class="ghost"></div>
+        <div class="container">
+            <div class="container col-sm-10 col-md-6 py-2">
+                <h5 class="text-center py-3 text-light">Have any questions or want to collaborate?</h5>
+
+                <form action="/" method="post">
+                    <input class="form-control" type="text" name="emailFrom" id="emailFrom" placeholder="Your Name">
+                    <input class="form-control" type="text" name="emailSubject" id="emailSubject" placeholder="Subject">
+                    <textarea class="form-control" name="emailText" id="emailText" placeholder="Message" rows="5" cols="20"></textarea>
+                    <button class="emailButton fs-5 mt-2" type="submit">Send</button>
+                    <button class="clearButton fs-5 mt-2" type="reset">Clear Form</button>
+                </form>
+
+                <div class="container d-flex py-5 justify-content-around">
+                    <div>
+                        <a href="https://www.linkedin.com/in/merritt-christopher"><i class="fa-brands fa-linkedin fa-3x"></i></a>
+                    </div>
+                    <div>
+                        <a href="https://github.com/Chrismerritt91"><i class="fa-brands fa-github fa-3x" ></i></a>
+
+                    </div>
+                    <div>
+                        <a href="https://alumni.codeup.com/students/1450"><img src="/img/codeup-chevron.png" height="48px" width="48px"/></a>
+
+                    </div>
+                </div>
+                <div class="container d-flex justify-content-around">
+                    <a href="#home"><i class=" fa-solid fa-chevron-up fa-3x"></i></a>
+                </div>
+                <br>
+                <div class="container d-flex justify-content-around">
+                    <button class="login-btn p-1 fs-5" data-bs-toggle="modal" data-bs-target="#loginModal"><span class="login">Merritt</span>|2022</button>
+                </div>
+            </div>
+        </div>
+        <div class="ghost"></div>
+<!--        <form th:action="@{/create-user}" th:method="POST" th:object="${user}">-->
+<!--            <div class="form-floating mb-3">-->
+<!--                <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" th:field="*{username}" >-->
+<!--                <label for="floatingInputUsername">Username</label>-->
+<!--            </div>-->
+
+<!--            <div class="form-floating mb-3">-->
+<!--                <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com" th:field="*{email}">-->
+<!--                <label for="floatingInputEmail">Email address</label>-->
+<!--            </div>-->
+
+<!--            <div class="form-floating mb-3">-->
+<!--                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" th:field="*{password}">-->
+<!--                <label for="floatingPassword">Password</label>-->
+<!--            </div>-->
+
+<!--            <div class="d-grid mb-2">-->
+<!--                <button class="btn btn-dark btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Register</button>-->
+<!--            </div>-->
+
+<!--        </form>-->
+    </section>
+
+    <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" id="resume-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resumeModalLabel">Christopher Merritt Resume</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <embed src="/docs/Merritt_Resume.pdf" class="w-100 h-100" >
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form th:action="@{/login}" th:method="post">
+                        <div class="mt-3">
+                            <label class="form-label" for="username">Username</label>
+                            <input class="form-control" id="username" name="username" type="text"
+                                   placeholder="Enter username"/>
+                        </div>
+                        <div class="mt-3">
+                            <label class="form-label" for="password">Password</label>
+                            <input class="form-control" id="password" name="password" type="password"
+                                   placeholder="Enter password"/>
+                        </div>
+                        <div class="d-grid my-3">
+                            <button class="btn btn-dark">Log In</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/db7e223ec9.js" crossorigin="anonymous"></script>
+<script src="/jquery-3.6.0.js"></script>
+<script>
+    //code to get navbar to stick
+    window.onscroll = function (){navFunction()};
+    let navbar = document.getElementById("navbar");
+    let sticky = navbar.offsetTop;
+    function navFunction(){
+        if(window.scrollY >= sticky){
+            navbar.classList.add("sticky")
+        } else{
+            navbar.classList.remove("sticky")
+        }
+    }
+
+    $(".emailButton").click(function(){
+
+    })
+</script>
+</body>
+</html>

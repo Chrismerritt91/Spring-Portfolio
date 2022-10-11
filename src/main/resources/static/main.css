@@ -1,0 +1,172 @@
+body{
+    background-color: whitesmoke;
+    font-family: 'Inconsolata', monospace;
+}
+
+#home {
+    background-image: url("img/pexels-pixabay-mountain.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width:100%;
+    z-index: 1;
+}
+
+.nav-item > a {
+    color: darkolivegreen;
+    text-decoration: none;
+    transition: color 1s;
+}
+
+.nav-item > a:hover {
+    color: #FE8802;
+}
+
+.greeting {
+    font-family: 'Inconsolata', monospace;
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 5px 5px 10px black;
+    padding-top: 275px;
+}
+
+.name{
+    color: darkolivegreen;
+    text-shadow: 0 0 3px white;
+}
+
+.home1{
+    height: 100vh;
+}
+
+.button>a{
+    font-family: 'Inconsolata', monospace;
+    border: solid 1px white;
+    color: white;
+    background-color: gray;
+    text-decoration: none;
+    padding: 5px;
+    transition: background-color 1s;
+}
+
+.button>a:hover{
+    background-color: rosybrown;
+}
+
+#about{
+    background-color: whitesmoke;
+    font-family: 'Inconsolata', monospace;
+}
+
+.headshot{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.introduction>h4>span{
+    border-bottom: 2px #FE8802 solid;
+}
+
+.card{
+    background-color: whitesmoke;
+    border: none;
+}
+
+.card-title>span{
+    border-bottom: 2px #FE8802 solid;
+}
+
+.aboutP{
+    font-size: 14px;
+}
+
+.resume-link{
+    border: 1px solid darkolivegreen;
+    background-color: darkolivegreen;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: color, background-color;
+}
+
+.resume-link:hover{
+    color: black;
+    background-color: #FE8802;
+}
+
+.section-title>span{
+    border-bottom: darkolivegreen 3px solid;
+}
+
+#development{
+    width: 100vw;
+    background-color: lightgrey;
+}
+
+.project-title{
+    color: #FE8802;
+    text-align: center;
+    padding-top: 5px;
+    transition: color;
+}
+.project-title:hover{
+    color: darkolivegreen;
+}
+
+.dev-image{
+    border: 1px solid black;
+}
+
+#contact{
+    background-image: url("img/pexels-computer-2.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+}
+
+.ghost{
+    height: 45px;
+    width: 100vw;
+}
+
+.emailButton{
+    color: darkolivegreen;
+    border: 2px solid darkolivegreen;
+}
+
+.fa-brands{
+    color: gray;
+}
+
+.fa-chevron-up{
+    color: lightgray;
+    background: linear-gradient(45deg, black, gray);
+}
+
+#resume-content{
+    height: 600px;
+    width: 600px;
+}
+
+.clearButton{
+    color: darkolivegreen;
+    border: 2px solid darkolivegreen;
+}
+
+.login-btn{
+    background:none;
+    border: none;
+    color: white;
+}
+
+.login{
+    color: darkolivegreen;
+}
