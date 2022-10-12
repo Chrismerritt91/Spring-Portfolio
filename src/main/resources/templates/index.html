@@ -118,10 +118,11 @@
             <div class="container col-sm-10 col-md-6 py-2">
                 <h5 class="text-center py-3 text-light">Have any questions or want to collaborate?</h5>
 
-                <form action="/" method="post">
-                    <input class="form-control" type="text" name="emailFrom" id="emailFrom" placeholder="Your Name">
-                    <input class="form-control" type="text" name="emailSubject" id="emailSubject" placeholder="Subject">
-                    <textarea class="form-control" name="emailText" id="emailText" placeholder="Message" rows="5" cols="20"></textarea>
+                <form th:action="@{/messages/create}" th:method="post" th:object="${message}">
+                    <input class="form-control" type="text" th:field="*{name}" name="emailName" id="emailName" placeholder="Your Name">
+                    <input class="form-control" type="text" th:field="*{email}" name="emailFrom" id="emailFrom" placeholder="Your Email">
+                    <input class="form-control" type="text" th:field="*{subject}" name="emailSubject" id="emailSubject" placeholder="Subject">
+                    <textarea class="form-control" th:field="*{body}" name="emailText" id="emailText" placeholder="Message" rows="5" cols="20"></textarea>
                     <button class="emailButton fs-5 mt-2" type="submit">Send</button>
                     <button class="clearButton fs-5 mt-2" type="reset">Clear Form</button>
                 </form>

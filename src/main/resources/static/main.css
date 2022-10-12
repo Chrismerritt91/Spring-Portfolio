@@ -1,5 +1,5 @@
 body{
-    background-color: whitesmoke;
+    background-color: grey;
     font-family: 'Inconsolata', monospace;
 }
 
@@ -26,6 +26,16 @@ body{
 }
 
 .nav-item > a:hover {
+    color: #FE8802;
+}
+
+.nav-link {
+    color: darkolivegreen;
+    text-decoration: none;
+    transition: color 1s;
+}
+
+.nav-link:hover {
     color: #FE8802;
 }
 
@@ -169,4 +179,23 @@ body{
 
 .login{
     color: darkolivegreen;
+}
+
+.username{
+    color: darkolivegreen;
+}
+
+.count{
+    color: #FE8802;
+}
+
+.message{
+    border: 1px solid darkolivegreen;
+    background-color: lightgray;
+}
+
+.profile{
+    height: 100vh;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
 }
