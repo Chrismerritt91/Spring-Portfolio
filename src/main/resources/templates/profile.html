@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="icon" href="/img/android-chrome-512x512.png">
@@ -34,22 +35,28 @@
             </div>
         </div>
     </nav>
-    <div class="container profile" style="background-color: whitesmoke">
+    <div class="container profile">
+        <div class="ghost"></div>
         <h1 class="text-center py-3">Welcome Back <span class="username" th:text="${user.username}"></span></h1>
+        <hr>
         <div class="ghost"></div>
-        <h2>Your message count is: <span class="count" th:text="${count}"></span></h2>
+        <div class="container">
+            <h2>Your message count is: <span class="count" th:text="${count}"></span></h2>
+        </div>
         <div class="ghost"></div>
-        <div class="container messageList d-flex mb-4">
-            <div class="container message m-1 w-50" th:each="message: ${messages}">
-                <div class="d-flex">
+        <div class="container messageList d-block d-md-flex flex-wrap mb-4">
+            <div class="card message cols-md-5 cols-sm-10 m-2" th:each="message: ${messages}">
+                <div class="card-header d-flex">
                     <div class="fs-5" th:text="'Name:' + ' ' + ${message.name}"></div>
                     <div class="ms-auto fs-5" th:text="${#temporals.format(message.date, 'MMM-dd-yy')}"></div>
                 </div>
-                <div class="fs-5" th:text="'Email:' + ' ' + ${message.email}"></div>
-                <div class="fs-5" th:text="'Subject:' + ' ' + ${message.subject}"></div>
-                <div class="fs-5" th:text="'Message:' + ' ' + ${message.body}"></div>
-                <div>
-
+                <div class="card-body">
+                    <div class="fs-5" th:text="'Email:' + ' ' + ${message.email}"></div>
+                    <div class="fs-5" th:text="'Subject:' + ' ' + ${message.subject}"></div>
+                    <div class="fs-5" th:text="'Message:' + ' ' + ${message.body}"></div>
+                    <form th:action="@{/messages/{id}/delete(id = ${message.id})}" th:method="post">
+                        <button class="newDelete btn btn-danger">Delete</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -77,9 +84,6 @@
         }
     }
 
-    $(".emailButton").click(function () {
-
-    })
 </script>
 </body>
 </html>

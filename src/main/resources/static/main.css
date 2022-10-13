@@ -1,5 +1,5 @@
 body{
-    background-color: grey;
+    background-color: whitesmoke;
     font-family: 'Inconsolata', monospace;
 }
 
@@ -8,8 +8,6 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
-    width: 100vw;
 }
 
 .sticky{
@@ -45,6 +43,7 @@ body{
     text-align: center;
     text-shadow: 5px 5px 10px black;
     padding-top: 275px;
+    padding-bottom: 275px;
 }
 
 .name{
@@ -52,9 +51,6 @@ body{
     text-shadow: 0 0 3px white;
 }
 
-.home1{
-    height: 100vh;
-}
 
 .button>a{
     font-family: 'Inconsolata', monospace;
@@ -144,7 +140,7 @@ body{
 
 .ghost{
     height: 45px;
-    width: 100vw;
+    width: 100%;
 }
 
 .emailButton{
@@ -191,11 +187,24 @@ body{
 
 .message{
     border: 1px solid darkolivegreen;
-    background-color: lightgray;
 }
 
-.profile{
-    height: 100vh;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+hr{
+    color: darkolivegreen;
+    background-color: darkolivegreen;
+    height: 5px;
+    opacity: 75%;
+}
+
+.deleteModal{
+    display: none;
+}
+
+@media screen and (max-width: 576px){
+
+    .greeting{
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
 }

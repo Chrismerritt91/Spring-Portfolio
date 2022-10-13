@@ -4,6 +4,7 @@ import com.example.springportfolio.model.Message;
 import com.example.springportfolio.model.User;
 import com.example.springportfolio.repositories.MessageRepository;
 import com.example.springportfolio.repositories.UserRepository;
+import com.example.springportfolio.services.EmailService;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -19,11 +20,13 @@ public class HomeController {
     private MessageRepository messageDao;
     private UserRepository userDao;
     private PasswordEncoder passwordEncoder;
+    private EmailService emailService;
 
-    public HomeController(MessageRepository messageDao, UserRepository userDao, PasswordEncoder passwordEncoder) {
+    public HomeController(MessageRepository messageDao, UserRepository userDao, PasswordEncoder passwordEncoder, EmailService emailService) {
         this.messageDao = messageDao;
         this.userDao = userDao;
         this.passwordEncoder = passwordEncoder;
+        this.emailService = emailService;
     }
 
     @GetMapping("/")
@@ -37,6 +40,7 @@ public class HomeController {
         User user = userDao.findById(2L).get();
         message.setUser(user);
         messageDao.save(message);
+        emailService.prepareAndSend(user, "New Message");
         return "redirect:/";
     }
 
