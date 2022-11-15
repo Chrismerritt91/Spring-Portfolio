@@ -11,6 +11,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(nullable = false)
+    private String first_name;
+
+    @Column(nullable = false)
+    private String last_name;
+
     @Column(nullable = false, unique = true)
     private String username;
 
@@ -26,15 +32,18 @@ public class User {
     public User() {
     }
 
-    public User(String username, String password, String email) {
+    public User(String first_name, String last_name, String username, String password, String email) {
+        this.first_name = first_name;
+        this.last_name = last_name;
         this.username = username;
         this.password = password;
         this.email = email;
     }
 
-
     public User(User copy) {
         id = copy.id;
+        first_name = copy.first_name;
+        last_name = copy.last_name;
         username = copy.username;
         password = copy.password;
         email = copy.email;
@@ -70,6 +79,22 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getFirst_name() {
+        return first_name;
+    }
+
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
+    }
+
+    public String getLast_name() {
+        return last_name;
+    }
+
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
 
     public List<Message> getMessages() {

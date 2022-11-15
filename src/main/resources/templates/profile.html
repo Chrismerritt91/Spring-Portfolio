@@ -37,7 +37,7 @@
     </nav>
     <div class="container profile">
         <div class="ghost"></div>
-        <h1 class="text-center py-3">Welcome Back <span class="username" th:text="${user.username}"></span></h1>
+        <h1 class="text-center py-3">Welcome Back <span class="username" th:text="${user.first_name + ' ' + user.last_name}"></span></h1>
         <hr>
         <div class="ghost"></div>
         <div class="container">
