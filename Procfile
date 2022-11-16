@@ -1,1 +1,0 @@
-web: java -jar target/Spring-Portfolio-1.0.jar
